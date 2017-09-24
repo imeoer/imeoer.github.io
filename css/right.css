@@ -1,0 +1,100 @@
+.right {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  @media (--small) {
+    align-items: center;
+  }
+  .keys {
+    writing-mode: vertical-rl;
+    @media (--small) {
+      writing-mode: unset;
+    }
+    .item {
+      margin-left: 100px;
+      @media (--small) {
+        margin-left: 0;
+        text-align: center;
+      }
+      .wrap {
+        display: flex;
+        align-items: center;
+        .point {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          margin-bottom: 20px;
+          @media (--small) {
+            display: none;
+          }
+          &.green {
+            background-color: #009d07;
+            border: 5px solid #81df86;
+          }
+          &.purple {
+            background-color: #7d00f1;
+            border: 5px solid #c07cff;
+          }
+          &.red {
+            background-color: #c81238;
+            border: 5px solid #ff9cb1;
+          }
+          &.blue {
+            background-color: #008cde;
+            border: 5px solid #95ceff;
+          }
+          &.black {
+            background-color: $black;
+          }
+        }
+        .title {
+          font-size: 42px;
+          @media (--small) {
+            width: 100%;
+            margin-top: 40px;
+          }
+        }
+      }
+      .subtitle {
+        margin-top: 50px;
+        @media (--small) {
+          margin-top: 10px;
+        }
+        font-size: 28px;
+        color: $grey;
+      }
+    }
+  }
+  .start-wrap {
+    margin-top: 60px;
+    position: relative;
+    @media (--small) {
+      text-align: center;
+      .bg1 {
+        display: none;
+      }
+    }
+    .bg1 {
+      position: absolute;
+      z-index: -1;
+      max-width: 220px;
+      top: -60px;
+      right: 20px;
+      opacity: 0.8;
+    }
+    .bg2 {
+      position: absolute;
+      right: -30px;
+      top: -15px;
+      z-index: -1;
+      max-width: 400px;
+    }
+    .start {
+      margin-right: 10px;
+      img {
+        @mixin btn;
+      }
+    }
+  }
+}
