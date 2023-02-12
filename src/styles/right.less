@@ -1,19 +1,21 @@
+@import "base.less";
+
 .right {
   margin-bottom: 60px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  @media (--small) {
+  @media @md-small {
     align-items: center;
   }
   .keys {
     writing-mode: vertical-rl;
-    @media (--small) {
+    @media @md-small {
       writing-mode: unset;
     }
     .item {
       margin-left: 100px;
-      @media (--small) {
+      @media @md-small {
         margin-left: 0;
         text-align: center;
       }
@@ -25,7 +27,7 @@
           height: 20px;
           border-radius: 50%;
           margin-bottom: 20px;
-          @media (--small) {
+          @media @md-small {
             display: none;
           }
           &.green {
@@ -45,12 +47,12 @@
             border: 5px solid #95ceff;
           }
           &.black {
-            background-color: $black;
+            background-color: @black;
           }
         }
         .title {
           font-size: 42px;
-          @media (--small) {
+          @media @md-small {
             width: 100%;
             margin-top: 40px;
           }
@@ -58,18 +60,18 @@
       }
       .subtitle {
         margin-top: 50px;
-        @media (--small) {
+        @media @md-small {
           margin-top: 10px;
         }
         font-size: 28px;
-        color: $grey;
+        color: @grey;
       }
     }
   }
   .start-wrap {
     margin-top: 60px;
     position: relative;
-    @media (--small) {
+    @media @md-small {
       text-align: center;
       .bg1 {
         display: none;
@@ -93,7 +95,7 @@
     .start {
       margin-right: 10px;
       img {
-        @mixin btn;
+        .btn();
       }
     }
   }

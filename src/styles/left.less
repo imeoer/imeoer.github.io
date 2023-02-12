@@ -1,5 +1,7 @@
+@import "base.less";
+
 .left {
-  @media (--small) {
+  @media @md-small {
     text-align: center;
   }
   .logo {
@@ -8,12 +10,12 @@
       font-size: 65px;
       display: flex;
       align-items: center;
-      @media (--small) {
+      @media @md-small {
         justify-content: center;
       }
       .head {
         color: white;
-        background-color: $black;
+        background-color: @black;
         border-radius: 6px;
         width: 85px;
         height: 85px;
@@ -25,18 +27,18 @@
       .ver {
         font-size: 12px;
         font-family: sans-serif;
-        color: $grey;
+        color: @grey;
         margin-left: 15px;
-        @media (--small) {
+        @media @md-small {
           display: none;
         }
       }
     }
     .subtitle {
       font-size: 39px;
-      color: $grey;
+      color: @grey;
       margin-top: 15px;
-      @media (--small) {
+      @media @md-small {
         font-size: 28px;
       }
     }
@@ -50,7 +52,7 @@
       display: flex;
       align-items: center;
       margin-right: 40px;
-      @media (--small) {
+      @media @md-small {
         margin: 0 10px;
       }
       .icon {
